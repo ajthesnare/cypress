@@ -23,11 +23,13 @@ describe('Login Page', function() {
   it('should contain forgot username or password links', function() {
     cy.visit('https://rb4rb.redbrickhealth.com')
 
+    // Forgot password link and content
     cy.get('#forgotPassword-content a')
         .should('have.text', 'Forgot your password?')
         .and('have.attr', 'href')
         .and('include', 'https://rb4rb.redbrickhealth.com/portal/login/forgotPassword')
 
+    // Forgot username link and content
     cy.get('#forgotUsername-content a')
         .should('have.text', 'Forgot your username?')
         .and('have.attr', 'href')
@@ -37,9 +39,11 @@ describe('Login Page', function() {
   it('should contain a registration header and link', function() {
     cy.visit('https://rb4rb.redbrickhealth.com')
 
+    // Registration header
     cy.get('#registration-content h4')
         .should('have.text', "Don't have a username?")
 
+    // Registration link and content
     cy.get('#registration-content p a')
         .should('have.text', 'Activate your account to get started')
         .and('have.attr', 'href')
@@ -49,12 +53,15 @@ describe('Login Page', function() {
   it('should contain contact information', function() {
     cy.visit('https://rb4rb.redbrickhealth.com')
 
+    // Contact header
     cy.get('#help-content h4')
         .should('have.text', 'Need help? Contact us')
 
+    // Contact phone number
     cy.get('#contact-info #phone')
         .should('have.text', '1-877-680-4060')
 
+    // Contact hours
     cy.get('#hours-expanded .item')
         .should('have.text', 'Monday7:00 a.m.–10:00 p.m. CTTuesday7:00 a.m.–10:00 p.m. CTWednesday7:00 a.m.–10:00 p.m. CTThursday7:00 a.m.–10:00 p.m. CTFriday7:00 a.m.–7:00 p.m. CTSaturday7:00 a.m.–2:00 p.m. CT')
   })
