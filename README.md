@@ -1,20 +1,20 @@
-#Cypress
+# Cypress
 Learn about [Cypress](https://www.cypress.io/)
 
-##Instructions
+## Instructions
 Download and install [Node.js](https://nodejs.org/en/)
 
 Install dependencies:
 ```
 npm install
 ```
-##Running Tests
+## Running Tests
 ```
 npm test
 ```
 [cli docs](https://docs.cypress.io/guides/guides/command-line.html#How-to-run-commands)
 
-##Manual
+## Manual
 Open Cypress UI:
 ```
 npm run cypress-open
